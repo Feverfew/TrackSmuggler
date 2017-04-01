@@ -1,1 +1,1 @@
-include ':mobile'
+include ':vksdk_library', ':mobile'

@@ -32,12 +32,15 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
     lintOptions {
-        abortOnError true
+        abortOnError false
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
         }
     }
 }
@@ -57,6 +60,8 @@ dependencies {
     compile 'com.android.support:mediarouter-v7:25.3.0'
     compile 'com.android.support:leanback-v17:25.3.0'
     compile 'com.android.support:design:25.3.0'
+    compile 'de.u-mass:lastfm-java:0.1.2'
+    compile project(':vksdk_library')
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'
     androidTestCompile 'junit:junit:4.12'
